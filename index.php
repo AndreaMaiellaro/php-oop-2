@@ -42,9 +42,9 @@ $user->addProduct($polpettone);
     <?php foreach($user->getProducts() as $product) { ?>
         <div>
             <ul>
-                <li>Marca: <?php echo $product->marca ?></li>
-                <li>Prezzo: <?php echo $product->prezzo . ' euro'; ?></li>
-                <li>Quantità: <?php echo $product->quantita ?></li>    
+                <li>Marca: <?php echo $product->marca  ?>;</li>
+                <li>Prezzo: <?php echo $product->prezzo . ' euro'; ?>;</li>
+                <li>Quantità: <?php echo $product->quantita ?>;</li>    
             </ul>
         </div>
     <?php } ?>
