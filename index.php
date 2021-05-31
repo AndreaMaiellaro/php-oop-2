@@ -1,7 +1,7 @@
 <?php
 
 // classe principale
-require_once __DIR__ . '/Prodotti-per-casa.php';
+require_once __DIR__ . '/ProdottiCasa.php';
 require_once __DIR__ . '/Cibo.php';
 require_once __DIR__ . '/Smartphone.php';
 require_once __DIR__ . '/User.php';
@@ -27,3 +27,27 @@ $user->addProduct($polpettone);
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Riepilogo ordine</h1>
+
+    <?php foreach($user->getProducts() as $product) { ?>
+        <div>
+            <ul>
+                <li>Marca: <?php echo $product->marca ?></li>
+                <li>Prezzo: <?php echo $product->prezzo . ' euro'; ?></li>
+                <li>Quantità: <?php echo $product->quantita ?></li>    
+            </ul>
+        </div>
+    <?php } ?>
+
+</body>
+</html>
